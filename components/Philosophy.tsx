@@ -35,7 +35,7 @@ const services: Service[] = [
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
     imageBase: "https://images.unsplash.com/photo-1611974714608-41584c0c4579",
     description:
-      "Optimizing value in specialized media, tech IP, and unique digital asset classes for long-term yields.",
+      "Optimizing value in specialized IP asset class transactions, with an emphasis on music rights.",
   },
 ];
 
