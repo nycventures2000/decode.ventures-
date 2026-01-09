@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
 
         <div className="max-w-5xl space-y-10">
           <div className="space-y-2">
-            <h1 className="text-6xl md:text-[9rem] font-bold font-display uppercase tracking-tight text-white leading-[0.85] drop-shadow-2xl">
+            <h1 className="text-6xl md:text-[9rem] font-bold font-display uppercase tracking-tight text-white leading-[1.0] drop-shadow-2xl">
               Decode<br/>The <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">Future</span>
             </h1>
           </div>
