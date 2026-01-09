@@ -26,14 +26,11 @@ type BubbleSpec = {
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-
-  // Reduce background animation workload on mobile (helps perceived load + smoothness)
   const [bubbleCount, setBubbleCount] = useState<number>(15);
 
   useEffect(() => {
     const updateForViewport = () => {
       const w = window.innerWidth;
-      // Fewer bubbles on smaller screens to reduce GPU/CPU cost
       setBubbleCount(w < 768 ? 6 : w < 1024 ? 10 : 15);
     };
 
@@ -42,7 +39,6 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", updateForViewport);
   }, []);
 
-  // Memoize bubble specs so scroll re-renders DO NOT regenerate random sizes/positions
   const bubbles: BubbleSpec[] = useMemo(() => {
     const rand = (min: number, max: number) => Math.random() * (max - min) + min;
 
@@ -78,16 +74,12 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative bg-black selection:bg-orange-500 selection:text-white overflow-x-hidden">
-      {/* Global Liquid Gel & Bubbles Background */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-black">
-        {/* Deep Viscous Base */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0c0616] via-[#000000] to-[#04091a] opacity-100" />
 
-        {/* Animated Gel Globs */}
         <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-orange-600/5 rounded-full blur-[140px] animate-[gel-pulse_12s_infinite_alternate]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-blue-600/5 rounded-full blur-[160px] animate-[gel-pulse_15s_infinite_alternate-reverse]" />
 
-        {/* Bubble Layer */}
         <div className="absolute inset-0">
           {bubbles.map((b, i) => (
             <div
@@ -114,12 +106,10 @@ const App: React.FC = () => {
           ))}
         </div>
 
-        {/* Noise overlay (use inline data-uri so no external image request) */}
         <div className="absolute inset-0 noise-overlay" />
       </div>
 
       <style>{`
-        /* One unique keyframe per bubble so each can have its own drift values */
         ${bubbles
           .map(
             (b, i) => `
@@ -134,6 +124,7 @@ const App: React.FC = () => {
             `
           )
           .join("\n")}
+        ;
 
         @keyframes gel-pulse {
           0% { transform: scale(1) translate(0, 0); opacity: 0.4; }
@@ -141,7 +132,6 @@ const App: React.FC = () => {
           100% { transform: scale(0.95) translate(-10px, 20px); opacity: 0.4; }
         }
 
-        /* Lightweight noise via inline SVG (no network request) */
         .noise-overlay {
           opacity: 0.03;
           mix-blend-mode: overlay;
@@ -149,7 +139,6 @@ const App: React.FC = () => {
           background-size: 180px 180px;
         }
 
-        /* Respect reduced motion (improves mobile performance and accessibility) */
         @media (prefers-reduced-motion: reduce) {
           .noise-overlay { opacity: 0.02; }
           .animate-\\[gel-pulse_12s_infinite_alternate\\],
