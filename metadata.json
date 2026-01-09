@@ -1,0 +1,7 @@
+{
+  "name": "Decode Ventures - Advisory",
+  "description": "Specialized advisory firm for media, entertainment, and technology sectors, focusing on AI-enabled growth, partnership development, and music M&A.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
