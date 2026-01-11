@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           <div className="w-full pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex space-x-12 text-[9px] font-bold text-gray-500 tracking-[0.4em] uppercase">
               <a href="https://www.linkedin.com/company/decode-ventures" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">LinkedIn</a>
-              <a href="mailto:info@decode.ventures" className="hover:text-white transition-colors">Contact</a>
+              <a href="mailto:ac@decode.ventures" className="hover:text-white transition-colors">Contact</a>
             </div>
           </div>
         </div>

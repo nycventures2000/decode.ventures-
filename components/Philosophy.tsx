@@ -33,7 +33,7 @@ const services: Service[] = [
   {
     title: "IP Rights Transactions",
     icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-    imageBase: "https://images.unsplash.com/photo-1611974714608-41584c0c4579",
+    imageBase: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
     description:
       "Optimizing value in specialized IP asset class transactions, with an emphasis on music rights.",
   },

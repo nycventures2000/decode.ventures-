@@ -36,7 +36,7 @@ const About: React.FC = () => {
         </p>
         <div className="pt-6">
           <a
-            href="mailto:info@decode.ventures"
+            href="mailto:ac@decode.ventures"
             className="inline-block px-12 py-5 border-[3px] border-white text-black bg-white hover:bg-transparent hover:text-white transition-all duration-500 font-display font-bold uppercase tracking-[0.2em] text-sm shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
             Reach Out

@@ -14,7 +14,7 @@ const ContactSection: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         <div className="w-full md:w-auto flex-shrink-0">
           <div className="space-y-6">
-            <a href="mailto:info@decode.ventures" className="inline-block group relative">
+            <a href="mailto:ac@decode.ventures" className="inline-block group relative">
               <div className="absolute -inset-6 bg-orange-500/10 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative border-[3px] border-white/10 group-hover:border-orange-500 transition-colors duration-700 px-8 md:px-12 py-10 md:py-14 bg-white/5 backdrop-blur-sm">
                 <h3 className="text-5xl md:text-7xl font-display font-bold uppercase leading-tight text-white group-hover:text-orange-500 transition-colors duration-500">
